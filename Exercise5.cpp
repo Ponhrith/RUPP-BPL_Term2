@@ -5,6 +5,7 @@ int main(){
     int user_input;
     cout << "Enter the bank asset: " ;
     cin >> user_input;
+    
 
 
    struct {
@@ -57,5 +58,37 @@ int main(){
    Bank4.Loan1 = 125;
    Bank4.Loan2 = 0;
    Bank4.Asset = Bank4.Balance + Bank4.Loan1 +Bank4.Loan2;
+
+   if (user_input<Bank0.Asset){
+    cout << "Bank 0 is safe.";
+   }else{
+    cout << "Bank 0 is unsafe.";
+   }
+
+   if (user_input<Bank1.Asset){
+    cout << "Bank 1 is safe.";
+   }else{
+    cout << "Bank 1 is unsafe.";
+   }
+
+   if (user_input<Bank2.Asset){
+    cout << "Bank 2 is safe.";
+   }else{
+    cout << "Bank 2 is unsafe.";
+   }
+
+   if (user_input<Bank3.Asset){
+    cout << "Bank 3 is safe.";
+   }else{
+    cout << "Bank 3 is unsafe.";
+   }
+
+   if (user_input<Bank4.Asset){
+    cout << "Bank 4 is safe.";
+   }else{
+    cout << "Bank 4 is unsafe.";
+   }
+
+
 
 }
