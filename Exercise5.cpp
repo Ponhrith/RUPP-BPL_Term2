@@ -14,6 +14,9 @@ int main(){
     float Loan1;
     float Loan2;
     float Asset;
+    float assetSent;
+    float loanRe1;
+    float loanRe2;
     float loanReceived; 
    } Bank0, Bank1, Bank2, Bank3, Bank4;
 
@@ -22,7 +25,10 @@ int main(){
    Bank0.Loan1 = 100.5; //1
    Bank0.Loan2 = 320.5; //4
    Bank0.Asset = Bank0.Balance + Bank0.Loan1 +Bank0.Loan2;
+   Bank0.loanRe1 = 125; //2
+   Bank0.loanRe2 = 125; //3
    Bank0.loanReceived = Bank2.Loan1 + Bank3.Loan1;
+   
    //cout << Bank0.Asset;
 
    Bank1.Bank = "1";
@@ -30,6 +36,8 @@ int main(){
    Bank1.Loan1 = 85; //2
    Bank1.Loan2 = 40; //3
    Bank1.Asset = Bank1.Balance + Bank1.Loan1 +Bank1.Loan2;
+   Bank1.loanRe1 = 100.5; //0
+   Bank1.loanRe2 = 0;
    Bank1.loanReceived = Bank0.Loan1; 
 
    Bank2.Bank = "2";
@@ -37,6 +45,8 @@ int main(){
    Bank2.Loan1 = 125; //0
    Bank2.Loan2 = 75; //3
    Bank2.Asset = Bank2.Balance + Bank2.Loan1 +Bank2.Loan2;
+   Bank2.loanRe1 = 40; //1
+   Bank2.loanRe2 = 125; //4
    Bank2.loanReceived = Bank1.Loan1 + Bank4.Loan1; 
 
    Bank3.Bank = "3";
@@ -44,6 +54,8 @@ int main(){
    Bank3.Loan1 = 125; //0
    Bank3.Loan2 = 0;
    Bank3.Asset = Bank3.Balance + Bank3.Loan1 +Bank3.Loan2;
+   Bank3.loanRe1 = 85; //1
+   Bank3.loanRe1 = 40; //2
    Bank3.loanReceived = Bank1.Loan2 + Bank2.Loan2;
   
    Bank4.Bank = "4";
@@ -51,13 +63,17 @@ int main(){
    Bank4.Loan1 = 125; //2
    Bank4.Loan2 = 0;
    Bank4.Asset = Bank4.Balance + Bank4.Loan1 +Bank4.Loan2;
+   Bank4.loanRe1 = 320.5; //0
+   Bank4.loanRe2 = 0;
    Bank4.loanReceived = Bank0.Loan2;
 
    if (user_input<Bank0.Asset){
     cout << "Bank 0 is safe." << "\n";
    }else{
     cout << "Bank 0 is unsafe."<< "\n";
+
    }
+
 
    if (user_input<Bank1.Asset){
     cout << "Bank 1 is safe."<< "\n";
