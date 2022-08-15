@@ -68,18 +68,22 @@ int main(){
    Bank4.loanReceived = Bank0.Loan2;
 
    if (user_input<Bank0.Asset){
-    cout << "Bank 0 is safe." << "\n";
+    //cout << "Bank 0 is safe." << "\n";
+    cout<<"";    
    }else{
     cout << "Bank 0 is unsafe."<< "\n";
-    Bank2.Asset = (Bank2.Balance+ Bank2.Loan2) - Bank2.Loan1;
+    Bank2.Asset = (Bank2.Balance+ Bank2.Loan2);
         if(user_input<Bank2.Asset){
-            cout<<"Bank 2 is safe."<< "\n";
+            //cout<<"Bank 2 is safe."<< "\n";
+            cout<<"";
+
         }else{
             cout<<"Bank 2 is unsafe." << "\n";
         }
-    Bank3.Asset = (Bank3.Balance+ Bank3.Loan2) - Bank3.Loan1;
+    Bank3.Asset = (Bank3.Balance+ Bank3.Loan2);
         if(user_input<Bank2.Asset){
-            cout<<"Bank 3 is safe."<< "\n";
+            //cout<<"Bank 3 is safe."<< "\n";
+            cout<<"";
         }else{
             cout<<"Bank 3 is unsafe." << "\n";
         } 
@@ -87,12 +91,14 @@ int main(){
 
 
    if (user_input<Bank1.Asset){
-    cout << "Bank 1 is safe."<< "\n";
+    //cout << "Bank 1 is safe."<< "\n";
+    cout<<"";
    }else{
     cout << "Bank 1 is unsafe."<< "\n";
-    Bank0.Asset = (Bank0.Balance+ Bank0.Loan2) - Bank0.Loan1;
+    Bank0.Asset = (Bank0.Balance+ Bank0.Loan2);
         if(user_input<Bank0.Asset){
-            cout<<"Bank 0 is safe."<< "\n";
+            //cout<<"Bank 0 is safe."<< "\n";
+            cout<<"";
         }else{
             cout<<"Bank 0 is unsafe." << "\n";
         }
@@ -100,18 +106,21 @@ int main(){
 
 
    if (user_input<Bank2.Asset){
-    cout << "Bank 2 is safe."<< "\n";
+    //cout << "Bank 2 is safe."<< "\n";
+    cout<<"";
    }else{
     cout << "Bank 2 is unsafe."<< "\n";
-    Bank1.Asset = (Bank1.Balance+ Bank1.Loan1) - Bank1.Loan2;
+    Bank1.Asset = (Bank1.Balance+ Bank1.Loan1);
         if(user_input<Bank1.Asset){
-            cout<<"Bank 1 is safe."<< "\n";
+            //cout<<"Bank 1 is safe."<< "\n";
+            cout<<"";
         }else{
             cout<<"Bank 1 is unsafe." << "\n";
         }
-    Bank4.Asset = (Bank4.Balance+ Bank4.Loan2) - Bank4.Loan1;
+    Bank4.Asset = (Bank4.Balance+ Bank4.Loan2);
         if(user_input<Bank4.Asset){
-            cout<<"Bank 4 is safe."<< "\n";
+            //cout<<"Bank 4 is safe."<< "\n";
+            cout<<"";
         }else{
             cout<<"Bank 4 is unsafe." << "\n";    
         }
@@ -120,18 +129,21 @@ int main(){
 
 
    if (user_input<Bank3.Asset){
-    cout << "Bank 3 is safe."<< "\n";
+    //cout << "Bank 3 is safe."<< "\n";
+    cout << " ";
    }else{
     cout << "Bank 3 is unsafe."<< "\n";
-    Bank1.Asset = (Bank1.Balance+ Bank1.Loan1) - Bank1.Loan2;
+    Bank1.Asset = (Bank1.Balance+ Bank1.Loan1);
         if(user_input<Bank1.Asset){
-            cout<<"Bank 1 is safe."<< "\n";
+            //cout<<"Bank 1 is safe."<< "\n";
+            cout<< "";
         }else{
             cout<<"Bank 1 is unsafe." << "\n";
         }
-    Bank2.Asset = (Bank2.Balance+ Bank2.Loan1) - Bank2.Loan2;
+    Bank2.Asset = (Bank2.Balance+ Bank2.Loan1);
         if(user_input<Bank2.Asset){
-            cout<<"Bank 2 is safe."<< "\n";
+            //cout<<"Bank 2 is safe."<< "\n";
+            cout<<"";
         }else{
             cout<<"Bank 2 is unsafe." << "\n";
         } 
@@ -140,12 +152,14 @@ int main(){
 
 
    if (user_input<Bank4.Asset){
-    cout << "Bank 4 is safe."<< "\n";
+    //cout << "Bank 4 is safe."<< "\n";
+    cout << "";
    }else{
     cout << "Bank 4 is unsafe."<< "\n";
     Bank0.Asset = (Bank0.Balance+ Bank0.Loan1) - Bank0.Loan2;
         if(user_input<Bank0.Asset){
-            cout<<"Bank 0 is safe."<< "\n";
+            //cout<<"Bank 0 is safe."<< "\n";
+            cout<<"";
         }else{
             cout<<"Bank 0 is unsafe." << "\n";
         }
