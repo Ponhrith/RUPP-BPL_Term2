@@ -5,11 +5,11 @@ int main(){
 
     int temp,rev,rem,b;
 	// loop from 0 until 2002
-   	for(int i = 0; i <= 2002; i++){
+   	for(int i = 0; i <= 2002 ; i++){
       	temp=i;
       	rev=0;
       	// find a reverse number
-      	while(temp){
+      	while(temp != 0){
          	rem=temp%10;
          	temp=temp/10;
          	rev=rev*10+rem;
