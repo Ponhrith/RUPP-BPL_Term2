@@ -1,94 +1,46 @@
+/* 5. Write a function called display_longest_word that will accept a string, then displays the longest
+word within the string. */
 #include <iostream>
-#include <string.h> 
-#define MAX_LEN 50
+#include <string>
+
 using namespace std;
- 
-void selectionSort(char arr[][MAX_LEN], int n) 
-{ 
+void display_longest_word(){
+    
+    string str, longest;
+    int count = 0, big_word = 0;
 
-    int i, j, min_idx; 
- 
+    cout << "Enter string: ";
+    getline(cin , str) ;
 
-    // One by one move boundary of unsorted subarray 
+    int size = str.size();
 
-    char minStr[MAX_LEN]; 
+    for (int i = 0; i < size; i++){
+        if(str[i] != ' '){
+            count++;
+        }
 
-    for (i = 0; i < n-1; i++) 
+        if(str[i] == ' ' ||  i == size - 1){
+            if(count > big_word){
+                big_word = count;
+                            
+                if(i == size - 1){
+                    longest = str.substr(i + 1 - big_word, big_word);
+                }
+                else{
+                    longest = str.substr(i - big_word, big_word);
+                }
+                    
+            }
+            count = 0;
+        }
+    }
+cout << "Longest word in the string is: " << longest;
 
-    { 
+}
 
-        // Find the minimum element in unsorted array 
+int main(){
 
-        int min_idx = i; 
+    display_longest_word();
 
-        strcpy(minStr, arr[i]); 
-
-        for (j = i + 1; j < n; j++) 
-
-        { 
-
-            // If min is greater than arr[j] 
-
-            if (strcmp(minStr, arr[j]) > 0) 
-
-            { 
-
-                // Make arr[j] as minStr and update min_idx 
-
-                strcpy(minStr, arr[j]); 
-
-                min_idx = j; 
-
-            } 
-
-        } 
- 
-
-        // Swap the found minimum element with the first element 
-
-        if (min_idx != i) 
-
-        { 
-
-            char temp[MAX_LEN]; 
-
-            strcpy(temp, arr[i]); //swap item[pos] and item[i] 
-
-            strcpy(arr[i], arr[min_idx]); 
-
-            strcpy(arr[min_idx], temp); 
-
-        } 
-
-    } 
-} 
- 
-int main() 
-{ 
-
-    char arr[][MAX_LEN] = {"Japan","Cambodia","USA","Australia","Korea"}; 
-
-    int n = sizeof(arr)/sizeof(arr[0]); 
-
-    int i; 
- 
-
-    cout<<"Given Countries is\n"; 
-
-    for (i = 0; i < n; i++) 
-
-        cout << i << ": " << arr[i] << endl; 
- 
-
-    selectionSort(arr, n); 
- 
-
-    cout << "\nSorted Countries is\n"; 
-
-    for (i = 0;i < n; i++) 
-
-        cout << i << ": " << arr[i] << endl; 
-
-
-    return 0; 
-} 
+    return 0;
+}  
