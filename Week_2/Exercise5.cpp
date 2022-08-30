@@ -4,25 +4,28 @@ word within the string. */
 #include <string>
 
 using namespace std;
-void display_longest_word(){
+void display_longest_word(string str){
     
-    string str, longest;
+    string longest;
     int count = 0, big_word = 0;
-
-    cout << "Enter string: ";
-    getline(cin , str) ;
 
     int size = str.size();
 
+    // loop until encounter space
     for (int i = 0; i < size; i++){
+
+        // if character is not space count
         if(str[i] != ' '){
             count++;
         }
 
         if(str[i] == ' ' ||  i == size - 1){
+
+            // compare words
             if(count > big_word){
                 big_word = count;
-                            
+
+                // extract substring from the string          
                 if(i == size - 1){
                     longest = str.substr(i + 1 - big_word, big_word);
                 }
@@ -31,16 +34,24 @@ void display_longest_word(){
                 }
                     
             }
+
+            // reset count
             count = 0;
         }
     }
-cout << "Longest word in the string is: " << longest;
 
+    // output
+    cout << "Longest word in the string is: " << longest;
 }
 
 int main(){
 
-    display_longest_word();
+    // input
+    string str;
+    cout << "Enter string: ";
+    getline(cin, str);
+
+    display_longest_word(str);
 
     return 0;
 }  
