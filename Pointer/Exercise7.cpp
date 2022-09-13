@@ -18,7 +18,7 @@ int main(){
         int backward_array_colum = 0;
 
         for(;backward_array_colum <= (array_row - to_the_next_colum);){
-            cout << *(point + ((array_size * array_row) + to_the_next_colum) - (iteration * backward_array_colum)) << "\t"; // some weird algorithm that I did. but, it works tho.
+            cout << *(point + ((array_size * array_row) + to_the_next_colum) - (iteration * backward_array_colum)) << "\t"; 
             backward_array_colum++;
         }
 

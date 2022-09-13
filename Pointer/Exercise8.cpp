@@ -1,146 +1,51 @@
-#include <iostream> 
-
-  
-
-using namespace std; 
-
-  
-// Recursive function to traverse the 
-// matrix Diagonally Bottom-up 
-
-bool traverseMatrixDiagonally(int m[][5],  
-
-          int i, int j, int row, int col) 
-{ 
-
-      
-
-    // Static variable for changing 
-
-    // Row and column 
-
-    static int k1 = 0, k2 = 0; 
-
-      
-
-    // Flag variable for handling 
-
-    // Bottom up diagonal traversing 
-
-    static bool flag = true; 
-
-      
-
-    // Base Condition 
-
-    if (i >= row || j >= col) { 
-
-          
-
-        // Condition when to traverse 
-
-        // Bottom Diagonal of the matrix 
-
-        if (flag) { 
-
-            int a = k1; 
-
-            k1 = k2; 
-
-            k2 = a; 
-
-            flag = !flag; 
-
-            k1++; 
-
-        } 
-
-        else { 
-
-  
-
-            int a = k1; 
-
-            k1 = k2; 
-
-            k2 = a; 
-
-            flag = !flag; 
-
-        } 
-
-        cout << endl; 
-
-        return false; 
-
-    } 
-
-      
-
-    // Print matrix cell value 
-
-    cout << m[i][j] << " "; 
-
-      
-
-    // Recursive function to traverse 
-
-    // The matrix diagonally 
-
-    if (traverseMatrixDiagonally( 
-
-           m, i + 1, j + 1, row, col)) { 
-
-        return true; 
-
-    } 
-
-    // Recursive function  
-
-    // to change diagonal 
-
-    if (traverseMatrixDiagonally( 
-
-            m, k1, k2, row, col)) { 
-
-        return true; 
-
-    } 
-
-      
-
-    return true; 
-} 
-
-  
-// Driver Code 
-
-int main() 
-{ 
-
-    // Initialize the 5 x 5 matrix 
-
-    int mtrx[5][5] = { 
-
-        { 10, 11, 12, 13, 14 }, 
-
-        { 15, 16, 17, 18, 19 }, 
-
-        { 20, 21, 22, 23, 24 }, 
-
-        { 25, 26, 27, 28, 29 }, 
-
-        { 30, 31, 32, 33, 34 } 
-
-    }; 
-
-  
-
-    // Function call  
-
-    // for traversing matrix 
-
-    traverseMatrixDiagonally( 
-
-            mtrx, 0, 0, 5, 5); 
-} 
+#include <iostream>
+
+using namespace std;
+
+int arr[4][4] = {
+    {1, 2, 3, 4},
+    {5, 6, 7, 8},
+    {9, 10, 11, 12},
+    {13, 14, 15, 16},
+};
+
+int* point = &arr[3][0];
+
+/*
+13
+9       14
+5       10      15
+1       6       11      16
+
+2       7       12
+3       8
+4
+*/
+
+
+
+int main(){
+    int array_row_size = 4, array_row = 0, to_the_next_colum = 0, iteration = 5, activate_iteration = 0;
+    
+    for(array_row = 0; array_row <= 3; array_row++){
+        for(activate_iteration = 0; activate_iteration <= (array_row_size + array_row - 4); activate_iteration++){
+            cout << *((point - (array_row_size * array_row) + to_the_next_colum) + (iteration * activate_iteration)) << "\t";
+        }
+        activate_iteration = 0;
+        cout << endl;
+    }
+
+    while(array_row >= 3){
+        array_row = 3;
+        to_the_next_colum++;
+            for(activate_iteration = 0; activate_iteration <= (array_row_size + array_row - to_the_next_colum - 4); activate_iteration++){
+                cout << *((point - (array_row_size * array_row) + to_the_next_colum) + (iteration * activate_iteration)) << "\t";  
+        }
+        activate_iteration = 0;
+        cout << endl;
+        if(to_the_next_colum == 3){
+            break;
+        }
+    }
+    return 0;
+}
