@@ -12,8 +12,6 @@ int arr[4][4] = {
 int* point = &arr[3][0];
 
 
-
-
 int main(){
     int array_row_size = 4, array_row = 0, to_the_next_colum = 0, iteration = 5, activate_iteration = 0;
     

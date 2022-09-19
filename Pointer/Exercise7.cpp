@@ -14,7 +14,7 @@ int main(){
 
     int array_size = 4, array_row = 0, to_the_next_colum = 0, iteration = 3, backward_array_colum = 0;
 
-    for(; array_row <= 3; array_row++){ // to access each row starting from 0
+    for(; array_row <= 3; array_row++){ 
         int backward_array_colum = 0;
 
         for(;backward_array_colum <= (array_row - to_the_next_colum);){
