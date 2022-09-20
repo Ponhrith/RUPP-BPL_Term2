@@ -4,7 +4,7 @@ using namespace std;
 int main(){
 
 
-    string temp,n;
+    string temp,n, *str;
 	string *str = new string[10];
     cout << "Enter 10 Countries: " << endl;
     for(int i = 0; i < 10; ++i)
@@ -30,8 +30,6 @@ int main(){
        cout << str[i] << endl;
     }
 
-    
-    // delete[]str;
     free(str);
     return 0;
 }
