@@ -7,8 +7,8 @@ that have been read in ascending order. */
 using namespace std;
 int main(){
 
-    int count = 0,done;
-    char *ptr = (char*) malloc(100 * sizeof(char));
+    int count = 0;
+    int *ptr = (int*) malloc(100 * sizeof(int));
 
 
     // loop until input is 0
@@ -21,7 +21,7 @@ int main(){
         // store values in pointer
         *(ptr + count++) = *ptr;
 
-    }while(*ptr != done);
+    }while(*ptr != 0);
 
 
     // sort the values in ascending order
