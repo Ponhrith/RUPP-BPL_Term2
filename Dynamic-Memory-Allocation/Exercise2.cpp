@@ -1,4 +1,4 @@
-Exe/* 2. Write a program that first reads an integer number for the array size, then reads the numbers into the
+/* 2. Write a program that first reads an integer number for the array size, then reads the numbers into the
 array, display elements of the array, the number of even numbers and the number of obb numbers */
 
 #include <iostream>
