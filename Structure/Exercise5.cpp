@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-void funcA(){
-    struct aCustomer{
-        int account_no;
-        string name;
-        float balance;
 
-    };
+struct aCustomer{
+    int account_no;
+    string name;
+    float balance;
+
+};
 
     aCustomer customer1;
     customer1.account_no = 0001;
@@ -34,6 +34,9 @@ void funcA(){
     customer5.name = "Polly";
     customer5.balance = 300;
 
+
+void funcA(aCustomer){
+
     cout << customer1.account_no << " " <<  customer1.name << " " << customer1.balance << "\n";
     cout << customer2.account_no << " " <<  customer2.name << " " << customer2.balance << "\n";  
     cout << customer3.account_no << " " <<  customer3.name << " " << customer3.balance << "\n";  
@@ -47,7 +50,7 @@ int main(){
     string userInput;
 
     string a = "Type (1) to see the account number, name and balance of all customers: \n";
-    string b =  "Type (2) to see the account number, name and balance of all customers having balance more than $600: \n"; 
+    string b = "Type (2) to see the account number, name and balance of all customers having balance more than $600: \n"; 
     string c = "Type (3) Add $300 to the balance of all the customers having balance less than $500: \n";
     string d = "Type (4) Withdraw $100 in the balance of all the customers having balance more than $200: \n";
     string menu = a + b + c + d;
@@ -56,7 +59,13 @@ int main(){
     cin >> userInput;
 
     if (userInput == "1"){
-        funcA();
+        funcA(aCustomer);
+    } 
+
+    else if (userInput == "2"){
+        if (aCustomer.balance > 600){
+
+        }
     }
 
 
