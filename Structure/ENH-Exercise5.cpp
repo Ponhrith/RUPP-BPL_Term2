@@ -18,10 +18,13 @@ struct aCustomer{
     string name;
     float balance;
 
-}info[5] = {{1, "lyheng", 287},{2, "lymeng", 759},{3, "visal", 362}, {4, "mengseu", 327}, {5, "ponrith", 123}};
+}info[5] = {{1, "Lyheng", 287},{2, "Lymeng", 759},{3, "Visal", 362}, {4, "Mengseu", 327}, {5, "Ponrith", 123}};
+
+
 
 int main(){
     Menu();
+    
 }
 
 void Menu(){
@@ -41,17 +44,21 @@ void Menu(){
         case '1':
             display_all();
             break;
+            Menu();
 
         case '2':
             display_more_then_600();
+            // Menu();
             break;
 
         case '3':
             add_300();
+            // Menu();
             break;
 
         case '4':
             withdraw_100();
+            // Menu();
             break;
 
     }
