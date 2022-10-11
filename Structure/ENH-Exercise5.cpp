@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <stdio.h>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -21,20 +22,33 @@ struct aCustomer{
 }info[5] = {{1, "Lyheng", 287},{2, "Lymeng", 759},{3, "Visal", 362}, {4, "Mengseu", 327}, {5, "Ponrith", 123}};
 
 
-
 int main(){
+    bool loop = true;
+    while(loop){
     Menu();
+
+    bool loop = false;
+    }
+
+    // for (int j = 1; j >0; j++){
+    //     Menu();
+    // }   
+     Menu();
     
 }
 
 void Menu(){
+
     char userInput;
+
+    // while(true){
 
     string a = "Type (1) to see the account number, name and balance of all customers: \n";
     string b = "Type (2) to see the account number, name and balance of all customers having balance more than $600: \n"; 
     string c = "Type (3) Add $300 to the balance of all the customers having balance less than $500: \n";
     string d = "Type (4) Withdraw $100 in the balance of all the customers having balance more than $200: \n";
-    string menu = a + b + c + d;
+    string e = "Type (5) to exit the program \n";
+    string menu = a + b + c + d + e;
 
     cout << menu;
     scanf ("%c", &userInput);
@@ -43,25 +57,30 @@ void Menu(){
 
         case '1':
             display_all();
+            // for (int j = 1; j >0; j++){
+            // Menu();
+            // }            
             break;
-            Menu();
 
         case '2':
             display_more_then_600();
-            // Menu();
             break;
+            
+            
 
         case '3':
             add_300();
-            // Menu();
             break;
-
+          
         case '4':
             withdraw_100();
-            // Menu();
             break;
+        
+        case '5':
+            exit(0);
 
     }
+    // }
 
     return;
 }
