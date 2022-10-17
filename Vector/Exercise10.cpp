@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <vector>
 using namespace std;
 
 int findCountry(string arr[], int len, string seek)
@@ -13,8 +14,8 @@ int findCountry(string arr[], int len, string seek)
 }
 
 int main(){
-    string countries[5]={"Brunei", "Cambodia", "East Timor", "Indonesia", "Laos"};
-    string capitals[5]={"Bandar Seri Begawan", "Phnom Penh", "Dili", "Jakarta", "Vientiane"};
+    std::vector<std::string> countries={"Cambodia", "Thailand", "China", "Japan", "India", "Malaysia"};
+    std::vector<std::string> capital={"Phnom Penh", "Bangkok", "Beijing", "Tokyo", "Delhi", "Kuala Lumpur"};
         
     string country;
     
@@ -23,7 +24,7 @@ int main(){
     
     int index = findCountry(countries,5,country);
      if (index >= 0)
-        cout << "Capital: " << capitals[index];
+        cout << "Capital: " << capital[index];
     else
         cout << country << " is not a South East Asian Country";
     
