@@ -12,7 +12,7 @@ int main()
 
 	std::sort(v.begin(), v.end(),
 			[](const pair &x, const pair &y) {
-				
+			 	
 				if (x.second != y.second) {
 					return x.second < y.second;
 				}
