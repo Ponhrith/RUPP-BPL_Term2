@@ -12,12 +12,12 @@ int main()
 
 	std::sort(v.begin(), v.end(),
 			[](const pair &x, const pair &y) {
-				// compare the second value
+				
 				if (x.second != y.second) {
 					return x.second < y.second;
 				}
 
-				// compare first only if the second value is equal
+				
 				return x.first < y.first;
 			});
 
