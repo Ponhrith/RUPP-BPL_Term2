@@ -67,9 +67,9 @@ void start(vector< vector<char> > &vec){
         cout << "\nEnter row column for player "<< ch <<": ";
         cin >> row >> col;
 
-        if (row < 3 && col < 3){
+        if (row < 3 && col < 3){ 
 
-            if (vec[row][col] == ' '){
+            if (vec[row][col] == ' '){ 
 
                 enter(row, col, ch, vec);
                 draw_board(vec);
